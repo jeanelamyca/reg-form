@@ -12,7 +12,24 @@
   </ion-toolbar>
 
   <ion-content>
-    <ion-button color="success" size="full" (click)="logMeIn()">Log In</ion-button>
-    <br>
-    <ion-button color="light" size="full" (click)="regMeIn()">Register</ion-button>
+    <div class="flex-center">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">Already have an account?</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-button color="success" size="full" (click)="logMeIn()">Login</ion-button>
+        </ion-card-content>
+      </ion-card>
+      <br>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title color="success">If no, register here</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            <ion-button color="light" size="full" (click)="regMeIn()">Register</ion-button>
+        </ion-card-content>
+      </ion-card>
+      
+    </div>
   </ion-content>
