@@ -16,5 +16,4 @@ export class RegistrationPage implements OnInit {
   cancelMe() {
     this.router.navigate(['/home']);
   }
-
 }

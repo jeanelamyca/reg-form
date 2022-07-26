@@ -18,4 +18,8 @@ export class HomePage {
     this.router.navigate(['/registration']);
   }
 
+  cancelMe() {
+    this.router.navigate(['/home']);
+  }
+
 }

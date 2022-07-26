@@ -13,6 +13,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  
   cancelMe() {
     this.router.navigate(['/home']);
   }
