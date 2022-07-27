@@ -10,18 +10,36 @@
       <ion-card-title color="success">Name</ion-card-title>
     </ion-card-header>
   <ion-card-content>
-    <ion-item>
-      <ion-label position="stacked">First Name</ion-label>
-      <ion-input placeholder="Enter First Name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Middle Name</ion-label>
-      <ion-input placeholder="Enter Middle Name"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Last Name</ion-label>
-      <ion-input placeholder="Enter Last Name"></ion-input>
-    </ion-item>
+    <div id="container">
+      <form action=""[formGroup]="registration">
+        First Name: <input type="text" formControlName="name">
+        <div>
+          <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+            First Name can not be empty
+          </ng-container>
+        </div>
+      </form>
+    </div>
+    <div id="container">
+      <form action=""[formGroup]="registration">
+        Middle Name: <input type="text" formControlName="name">
+        <div>
+          <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          Field can not be empty (if not applicable, N/A)
+          </ng-container>
+        </div>
+      </form>
+    </div>
+    <div id="container">
+      <form action=""[formGroup]="registration">
+        Last Name: <input type="text" formControlName="name">
+        <div>
+          <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+            Last Name can not be empty
+          </ng-container>
+        </div>
+      </form>
+    </div>
   </ion-card-content>
   </ion-card>
 
@@ -30,26 +48,48 @@
       <ion-card-title color="success">Address</ion-card-title>
     </ion-card-header>
   <ion-card-content>
-    <ion-item>
-      <ion-label position="stacked">Region</ion-label>
-      <ion-input placeholder="Enter Region"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Province</ion-label>
-      <ion-input placeholder="Enter Province"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">City</ion-label>
-      <ion-input placeholder="Enter Region"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Barangay</ion-label>
-      <ion-input placeholder="Enter Barangay"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Postal Code</ion-label>
-      <ion-input placeholder="Enter Postal Code"></ion-input>
-    </ion-item>
+    <div id="container">
+      <form action=""[formGroup]="registration">
+        Region: <input type="text" formControlName="name">
+        <div>
+          <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+            Region can not be empty
+          </ng-container>
+        </div>
+      </form>
+    </div>
+    <form action=""[formGroup]="registration">
+      Province: <input type="text" formControlName="name">
+      <div>
+        <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          Province can not be empty
+        </ng-container>
+      </div>
+    </form>
+    <form action=""[formGroup]="registration">
+      City: <input type="text" formControlName="name">
+      <div>
+        <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          City can not be empty
+        </ng-container>
+      </div>
+    </form>
+    <form action=""[formGroup]="registration">
+      Barangay <input type="text" formControlName="name">
+      <div>
+        <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          Barangay can not be empty
+        </ng-container>
+      </div>
+    </form>
+    <form action=""[formGroup]="registration">
+      Postal Code: <input type="text" formControlName="name">
+      <div>
+        <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          Postal Code can not be empty
+        </ng-container>
+      </div>
+    </form>
   </ion-card-content>
   </ion-card>
 
@@ -58,17 +98,25 @@
       <ion-card-title color="success">Contact</ion-card-title>
     </ion-card-header>
   <ion-card-content>
-    <ion-item>
-      <ion-label position="stacked">Email</ion-label>
-      <ion-input placeholder="Enter Email"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="stacked">Phone Number</ion-label>
-      <ion-input placeholder="Enter Phone Number"></ion-input>
-    </ion-item>
+    <form action=""[formGroup]="registration">
+      Email: <input type="text" formControlName="name">
+      <div>
+        <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          Email can not be empty
+        </ng-container>
+      </div>
+    </form>
+    <form action=""[formGroup]="registration">
+      Phone Number: <input type="text" formControlName="name">
+      <div>
+        <ng-container *ngIf="registration.get('name').hasError('required') && (registration.get('name').touched || registration.get('name').dirty)">
+          Phone Number can not be empty
+        </ng-container>
+      </div>
+    </form>
   </ion-card-content>
   </ion-card>
-
-  <ion-button color="success" size="full">Register</ion-button>
-  <ion-button color="light" size="full" (click)="cancelMe()">Cancel</ion-button>
+    
+    <ion-button color="success" size="full">Register</ion-button>
+    <ion-button color="light" size="full" (click)="cancelMe()">Cancel</ion-button>
 </ion-content>
